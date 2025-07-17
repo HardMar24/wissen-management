@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function loadGalleryImages(category = "Kuchen") {
     const images = galleryImages[category];
-    console.log('target5ed images', images);
 
     const container = document.getElementById("gallery-list");
     container.innerHTML = "";
