@@ -1,0 +1,144 @@
+:root {
+  --bg-color: #fff9f4;
+  --text-color: #333;
+  --header-bg: #8b4513;
+  --button-bg: #8b4513;
+  --button-hover: #a0522d;
+  --surface: #ffffff;
+  --primary: #8b4513;
+  /* --accent: #d2691e; */
+  --title-color: #fdba74;
+  --border-color: #818181;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1c1917;
+    --text-color: #f5f5f5;
+    --header-bg: #18181b;
+    --button-bg: #444;
+    --button-hover: #666;
+    --surface: #18181b;
+    --primary: #d2691e;
+    --title-color: #fdba74;
+    --border-color: #818181;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.theme-btn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    height: 2rem;
+    padding: 0.2rem 0.5rem;
+}
+.theme-btn i {
+    font-size: 2rem;
+    color: var(--text-color);
+    /* background-color: var(--bg-color); */
+}
+
+.theme-btn i {
+    color: #fff;
+}
+/* On dark mode */
+.theme-btn.dark-theme i.fa-moon-o {
+    display: inline;
+}
+.theme-btn.dark-theme i.fa-sun-o {
+    display: none;
+}
+
+/* On light mode */
+.theme-btn i.fa-moon-o {
+    display: none;
+}
+.theme-btn i.fa-sun-o {
+    display: inline;
+}
+
+/* Button */
+.btn {
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 5px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.btn-full {
+    width: 100%;
+}
+.btn-outlined {
+    border: 1.2px solid var(--primary);
+    color: var(--primary);
+    background: transparent
+}
+.btn-outlined:hover {
+    background: var(--primary);
+    color: var(--surface);
+    transition: all 0.3s ease-in-out;
+}
+.btn-accent {
+    background: var(--accent);
+    color: var(--surface);
+}
+.btn-accent:hover {
+    background: var(--primary);
+    color: var(--surface);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Nav bar */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--header-bg);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.title {
+    color: var(--title-color);
+    max-width: 3rem;
+    font-size: 0.6rem;
+}
+
+/* Wrapper */
+.container {
+    width: min(96%, 1335px);
+    margin-inline: auto;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 1rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.menu a {
+    text-decoration: none;
+    color: var(--title-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}

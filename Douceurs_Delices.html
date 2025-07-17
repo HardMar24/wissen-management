@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./sidenav.css">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <title>Douceurs & Délices</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      background: #fff9f4;
+      color: #333;
+    }
+
+    header {
+      color: #fff;
+      padding: 1rem;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-height: 5rem;
+      padding: 1rem auto;
+    }
+    .logo {
+      width: 3.5rem;
+      aspect-ratio: 1/1;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #8b4513;
+      margin-bottom: 1rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: var(--surface);
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      color: var(--primary)
+    }
+
+    .item {
+      display: inline-block;
+      /* margin: 1rem; */
+      text-align: center;
+      width: 14rem;
+      margin-right: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 3/4;
+    }
+
+    form input, form textarea, select {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #8b4513;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Style de zoom */
+    .zoom-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     background: rgba(0,0,0,0.8);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+     display: none;
+    }
+
+    .zoom-overlay img {
+     max-width: 90%;
+     max-height: 90%;
+     border-radius: 10px;
+     box-shadow: 0 0 15px #fff;
+     transition: transform 0.3s;
+    }
+
+    .zoom-overlay.active {
+     display: flex;
+    }
+ 
+
+    @media (max-width: 600px) {
+      .item {
+        width: 100%;
+      }
+    }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  header, footer {
+    background-color: var(--header-bg);
+  }
+  </style>
+</head>
+<body>
+  <header class="sticky-header">
+    <nav class="container">
+      <h1 style="display: flex; align-items:center;  gap:0.3em">
+        <img class="logo" alt="Douceurs_Delices" src="Logo.jpg" title="Douceurs & Délices" />
+        <div class="title">Douceurs & Délices</div>
+      </h1>
+      
+      <ul class="menu desktop">
+        <li><a href="#start">Start</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#products">Unsere Produkte</a></li>
+        <li><a href="#gallery">Unsere Angebote</a></li>
+        <li><a href="#order">Bestellung</a></li>
+      </ul>
+      <button class="theme-btn theme-toggle desktop" aria-label="Toggle theme">
+        <i class="fa fa-sun-o" aria-hidden="true"></i>
+        <i class="fa fa-moon-o" aria-hidden="true"></i>
+      </button>
+    
+      <button class="theme-btn openbtn mobile" onclick="openNav()">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
+
+  <aside>
+    <div id="mySidenav" class="sidenav">
+      <div class="wrapper">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+        <a href="#start">Start</a>
+        <a href="#about">Über uns</a>
+        <a href="#products">Unsere Produkte</a>
+        <a href="#gallery">Unsere Angebote</a>
+        <a href="#order">Bestellung</a>
+        
+        <hr class="divider">
+
+        <button style="padding: 0;" class="theme-btn theme-toggle" aria-label="Toggle theme">
+          <i class="fa fa-sun-o" aria-hidden="true"></i>
+          <i class="fa fa-moon-o" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="container">
+        <section id="start">
+        <h2>Willkommen bei Douceurs & Délices!</h2>
+        <p>Offrez-vous ainsi que vos proches des Gourmandises faites maison, preparees avec Soin et Amour pour chaque Occasion..</p>
+      </section>
+      <section id="about">
+        <h2>Über uns</h2>
+        <p>Wir sind eine familiengeführte Bäckerei mit Herz, Freude und Handwerk – Willkommen an Bord :)</p>
+      </section>
+      <section id="products">
+        <h2>Unsere Produkte</h2>
+        <label for="product-category">Produktkategorie wählen:</label>
+        <select id="product-category">
+          <option value="Kuchen">Kuchen</option>
+          <ul class="Kuchen">
+              <li><a href="birthday-cake">Birthday-cake</a></li>
+              <li><a href="babyshower-cake">Babyshower-cake</a></li>
+              <li><a href="bento-cake">Bento-cake</a></li>
+              <li><a href="buche de noel">Buche de noel</a></li>
+              <li><a href="cupcake">Cupcake</a></li>
+              <li><a href="magnum-cake">Magnum-cake</a></li>
+          </ul>
+          <option value="Auffrischung">Auffrischung</option>
+          <ul class="Auffrischung">
+              <li><a href="Bissap">Bissap</a></li>
+              <li><a href="joghurt">Joghurt</a></li>
+          </ul>
+        </select>
+        <div class="product-list" id="product-list"></div>
+      </section>
+      <section id="offers">
+        <h2>Unsere Angebote</h2>
+        <label for="week-select">Woche wählen:</label>
+        <select id="week-select">
+          <option value="28">KW 28</option>
+          <option value="29">KW 29</option>
+          <option value="51">KW 51</option>
+        </select>
+        <div class="offer-list" id="offer-list"></div>
+      </section>
+      <section id="Gallery">
+      <h2>Unsere Bildern</h2>
+      <label for="Kategorie-select">Kategorie wählen:</label>
+        <select id="Kategorie-select">
+          <option value="Kuchen" selected>Kuchen</option>
+          <option value="Auffrischung">Auffrischung</option>
+        </select>
+        <div class="product-list" id="gallery-list"></div>
+      </section>
+      <section id="order">
+        <h2>Bestellung</h2>
+        <form>
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="E-Mail" required />
+          <!-- <input type="text" placeholder="Produkt" /> -->
+          <select id="product-select">
+            <optgroup id="group-kuchen" label="Kuchen"></optgroup>
+            <optgroup id="group-auffrischung" label="Auffrischung"></optgroup>
+          </select>
+
+          <textarea placeholder="Nachricht an uns"></textarea>
+          <button class="btn btn-full" type="submit">Bestellung senden</button>
+        </form>
+        <div class="feedback">
+          <p>Wie war Ihre Bestellung?</p>
+          <button class="btn btn-outlined">Menge falsch</button>
+          <button class="btn btn-outlined">Geschmack nicht gut</button>
+          <button class="btn btn-outlined">Alles war lecker</button>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>📍 Ludwigstr. 9, 66115 Saarbrücken</p>
+      <p>📞 0176 697 172 30| ✉️ Tguimezap@yahoo.com</p>
+      <p>🕒 Mo-Sa: 10–18 Uhr</p>
+      <p> Lieferung/ Abholung am Sonntag möglich</P> 
+    </div>
+  </footer>
+
+  <div class="zoom-overlay" id="zoom-overlay">
+  <img id="zoomed-image" src="" alt="Zoom">
+</div>
+
+  <script src="./sidenav.js" defer></script>
+  <script src="./index.js" defer></script>
+</body>
+</html>
