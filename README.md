@@ -18,6 +18,6 @@ Die Erstellung einer benutzerfreundlichen, übersichtliche und leicht verständl
       
 2. Other technologies
 
-   -**VS Code**: Integreted Development Environment (IDE) to write the code
-   -**Git**: For the version control system
-   -**ChatGpt**: For Orientation and Explanation
+   - **VS Code**: Integreted Development Environment (IDE) to write the code
+   - **Git**: For the version control system
+   - **ChatGpt**: For Orientation and Explanation
