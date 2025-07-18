@@ -3,7 +3,7 @@
         { name: "Birthday-cake", price: "50,00 €", image: "Images/BirthdayCake.jpg" },
         { name: "Babyshower-cake", price: "60,00 €", image: "Images/BabyshowerCake1.jpg" },
         { name: "Bento-cake", price: "15,00 €", image: "Images/BentoCake1.jpg" },
-        { name: "Buche de noel", price: "20,00 €", image: "Images/es/BentoCake1.jpg" }
+        { name: "Buche de noel", price: "20,00 €", image: "Images/BentoCake1.jpg" }
       ],
       Auffrischung: [
         { name: "Bissap", price: "5,00 €", image: "Images/Bissap.jpg" },
