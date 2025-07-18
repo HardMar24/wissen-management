@@ -29,7 +29,7 @@ const galleryImages = {
         "Images/BirthdayCake.jpg",
         "Images/BabyshowerCake1.jpg",
         "Images/BentoCake1.jpg",
-        "Images/BucheDeNoel.jpg",
+        "Images/bucheDeNoel.jpg",
         "Images/Cupcake.jpg",
         "Images/MagnumCake.jpg"
     ],
