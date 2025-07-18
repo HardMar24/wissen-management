@@ -2,7 +2,6 @@
       Kuchen: [
         { name: "Birthday-cake", price: "50,00 €", image: "Images/BirthdayCake.jpg" },
         { name: "Babyshower-cake", price: "60,00 €", image: "Images/BabyshowerCake1.jpg" },
-        { name: "Babyshower-cake", price: "60,00 €", image: "Images/bucheDeNoel_Pistache.jpg.jpg" },
         { name: "Bento-cake", price: "15,00 €", image: "Images/BentoCake1.jpg" },
         { name: "Buche de noel", price: "20,00 €", image: "Images/bucheDeNoel_Pistache.jpg" }
       ],
@@ -20,9 +19,6 @@ const offers = {
     { name: "Auffrischung", oldPrice: "5,00 €", newPrice: "3,50 €", image: "Images/Bissap.jpg" }
     ],
     51: [
-    { name: "Buche de noel", oldPrice: " 20,00 €", newPrice: "15,00 €", image: "Images/bucheDeNoel_Pistache.jpg" }
-    ]
-   52: [
     { name: "Buche de noel", oldPrice: " 20,00 €", newPrice: "15,00 €", image: "Images/bucheDeNoel_Pistache.jpg" }
     ]
     };
